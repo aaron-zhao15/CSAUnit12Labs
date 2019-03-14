@@ -14,7 +14,14 @@ public class Word implements Comparable<Word> {
     }
 
     public int compareTo(Word rhs) {
-        return word.compareTo(rhs.toString());
+        int compare;
+        if(word.length()-rhs.toString().length()==0){
+            compare = word.compareTo(rhs.toString());
+        }
+        else{
+            compare = word.length()-rhs.toString().length();
+        }
+        return compare;
     }
 
     public String toString() {

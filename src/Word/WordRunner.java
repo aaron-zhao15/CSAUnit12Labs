@@ -12,10 +12,18 @@ import static java.lang.System.*;
 public class WordRunner {
 
     public static void main(String args[]) throws IOException {
-        Scanner file = new Scanner(new File("words"));
-
+        Scanner file = new Scanner(new File("src/Word/words.dat"));
         int size = file.nextInt();
-        System.out.print(file.nextLine());
-
+        
+        Word[] arr = new Word[size];
+        for(int i = 0; i < size; i++){
+            arr[i] = new Word(file.nextLine());
+        }
+        
+        Arrays.sort(arr);
+        
+        for(Word w: arr)
+            System.out.println(w.toString());
+        
     }
 }
