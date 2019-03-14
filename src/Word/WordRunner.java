@@ -1,4 +1,4 @@
-package unit12;
+package Word;
 
 //(c) A+ Computer Science
 //www.apluscompsci.com
